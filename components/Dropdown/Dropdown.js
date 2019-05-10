@@ -11,15 +11,15 @@ class Dropdown {
     this.content = this.element.querySelector('.dropdown-content');
     
     // Add a click handler to the button reference and call the toggleContent method.
-    this.button.addEventListener('click', () => {
-      this.toggleContent();
+    this.button.addEventListener('click', (event) => {
+      this.toggleContent(event);
     })
   }
 
-  toggleContent() {
+  toggleContent(event) {
     
     // Toggle the ".dropdown-hidden" class off and on
-    this.content.classList.toggle('.dropdown-hidden');
+    this.content.classList.toggle('dropdown-hidden');
   }
 }
 
